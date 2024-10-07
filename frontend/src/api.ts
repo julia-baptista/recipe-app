@@ -130,3 +130,27 @@ export const removeFavouriteRecipe = async(recipe: Recipe) => {
 
 
 }
+
+/* export const removeFavouriteRecipe = async (recipe: Recipe) => {
+  const url = 'http://localhost:5000/api/recipes/favourite';
+  const body = {
+    recipeId: recipe.id
+  };
+
+  try {
+    const response = await axios.delete(url, {
+      data: body,  // 'data' is used for the request body in DELETE requests with axios
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    if (response.status !== 200) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+  } catch (error) {
+    throw new Error(`Error removing favourite recipe: ${error}`);
+  }
+}; */
+
